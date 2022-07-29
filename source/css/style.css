@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*----------------------------------------------*/
+body {
+  color: #F2E8D9;
+}
+
+.editions {
+  background: url("../images/background/bg.png");
+}
+
+.requirements {
+  font-size: 18px;
+}
+
+.main {
+  background: url("../images/background/bg-2.png");
+  background-size: cover;
+  padding-top: 40px;
+}
+
+.requirements__title {
+  font-size: 54px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.requirements__container {
+  border-style: solid;
+  border-width: 0.55rem;
+  -o-border-image: url("../images/requirements-border.svg") 21 21 stretch;
+     border-image: url("../images/requirements-border.svg") 21 21 stretch;
+  background: rgba(6, 6, 5, 0.5);
+}
+.requirements__container div {
+  padding-bottom: 16px;
+}
+
+.requirements__container_params {
+  padding-top: 40px;
+  font-family: "Rubik", sans-serif;
+}
+.requirements__container_params .param {
+  font-weight: 400;
+  line-height: 21px;
+  text-align: right;
+}
+.requirements__container_params .desc {
+  color: #A2A2A2;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.requirements__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: left;
+}
