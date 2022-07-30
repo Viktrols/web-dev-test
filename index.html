@@ -2,177 +2,353 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pre-order</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="source/css/style.css">
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="source/css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+                $(document).ready(function (){
+                    $('#editions__menu > li > span ').click(function (){
+                        $('#container-menu > div').hide();
+                        var i=$(this).data('id');
+                            $('#d'+i).fadeIn();
+                        });
+                    });</script>
 
 </head>
 
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="row editions">
-<!-- <div class="c3 toogle" tabindex=1>статическая часть
-<p class="hideable">Скрываемый текст</p>
-</div>
-<div class="c3 toogle" tabindex=1>статическая часть
-<p class="hideable">Скрываемый текст</p>
-</div>
-<div class="c3 toogle" tabindex=1>статическая часть
-<p class="hideable">Скрываемый текст</p> -->
+        <ul id='editions__menu' class="list-group list-group-horizontal-md">
+            <li><img src="source/images/borders/menu/line-01.png"></li>
+            <li><span data-id='1'><div class='title_komplekt_1'>Standart</div></span>
+            <li>
+            <li><img src="source/images/borders/menu/line-02.png"></li>
+            <li><span data-id='2'><div class='title_komplekt_2'>Deluxe</div></span></li>
+            <li><img src="source/images/borders/menu/line-03.png"></li>
+            <li><span data-id='3'><div class='title_komplekt_3'>Ultimate</div></span></li>
+            <li><img src="source/images/borders/menu/line-04.png"></li>
+        </ul>
+        <div id='container-menu'>
 
-<ul id='spisok'>
+            <div id='d1' class="gal1 container" style="display:none;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="source/images/editions/standart.png" alt="">
+                        <button><img src="source/images/button-pre-order.png" alt=""></button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-8">
+                                Standart edition
+                            </div>
+                            <div class="col-md-4">
+                                ₴895.00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed
+                                    survival-horror FPS series,
+                                    set in an alternative version of the Chernobyl Exclusion Zone. Reveal a new chapter
+                                    in the history of the Zone
+                                    and delve into a nonlinear branching story in an open post-apocalyptic world. Fight
+                                    for survival with various foes
+                                    and hazardous radioactive environments, forging your own path through anomalies and
+                                    opponents to the
+                                    legendary Heart of Chernobyl.
+                                </p>
+                                <p>
+                                    The Standard Digital Edition provides access to the complete game, includes a set of
+                                    preorder bonuses and
+                                    exclusive content for the Steam platform: a dynamic theme, an animated avatar, and a
+                                    frame to distinguish
+                                    a true S.T.A.L.K.E.R. among his peers.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                +preorder
+                                <img src="source/images/bonus-items 1.png" alt="">
+                                bonus <img src="source/images/icons/info.png">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Preorder Bonus</p>
+                                <p>Special Extra Quest</p>
+                                <p>Official Soundtrack</p>
+                                <p>3 Costumes, 7 Weapon skins</p>
+                                <p>SEASON PASS</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Steam Exclusive Content</p>
+                                <p>Digital Artbook</p>
+                                <p>1 Costume, 3 Weapon skins</p>
+                                <p>2 Story Expansions</p>
+                            </div>
+                        </div>
 
-    <li data-id='1'><div class='title_komplekt_1'>ссылка_1</div></li>
-    <li data-id='2'><div class='title_komplekt_2'>ссылка_2</div></li>
+                    </div>
+                </div>
+            </div>
 
-    <li data-id='3'><div class='title_komplekt_3'>ссылка_3</div></li>
+            <div id='d2' class="gal1 container" style="display:none;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="source/images/editions/deluxe.png" alt="">
+                        <button><img src="source/images/button-pre-order.png" alt=""></button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-8">
+                                Deluxe edition
+                            </div>
+                            <div class="col-md-4">
+                                ₴1199.00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed
+                                    survival-horror
+                                    FPS series, set in an alternative version of the Chernobyl Exclusion Zone. Reveal a
+                                    new chapter
+                                    in the history of the Zone and delve into a nonlinear branching story in an open
+                                    post-apocalyptic world.
+                                    Fight for survival with various foes and hazardous radioactive environments, forging
+                                    your own path through
+                                    anomalies and opponents to the legendary Heart of Chernobyl.
+                                </p>
+                                <p>
+                                    The Digital Deluxe Edition provides access to the complete game, includes an
+                                    exclusive side mission,
+                                    set of preorder bonuses and exclusive content for the Steam platform, digital
+                                    artbook, game soundtrack,
+                                    character, and weapon skins for both singleplayer and multiplayer experience.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                +preorder
+                                <img src="source/images/bonus-items 1.png" alt="">
+                                bonus <img src="source/images/icons/info.png">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Preorder Bonus</p>
+                                <p>Special Extra Quest</p>
+                                <p>Official Soundtrack</p>
+                                <p>3 Costumes, 7 Weapon skins</p>
+                                <p>SEASON PASS</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Steam Exclusive Content</p>
+                                <p>Digital Artbook</p>
+                                <p>1 Costume, 3 Weapon skins</p>
+                                <p>2 Story Expansions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-</ul>
+            </div>
 
-<div id='container-menu'>
+            <div id='d3' class="gal1 container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="source/images/editions/ultimate.png" alt="">
+                        <button><img src="source/images/button-pre-order.png" alt=""></button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-8">
+                                Ultimate edition
+                            </div>
+                            <div class="col-md-4">
+                                ₴1599.00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed
+                                    survival-horror FPS series,
+                                    set in an alternative version of the Chernobyl Exclusion Zone. Reveal a new chapter
+                                    in the history of the Zone
+                                    and delve into a nonlinear branching story in an open post-apocalyptic world. Fight
+                                    for survival with various
+                                    foes and hazardous radioactive environments, forging your own path through anomalies
+                                    and opponents to the legendary
+                                    Heart of Chernobyl.
+                                </p>
+                                <p>
+                                    The Digital Ultimate Edition includes all digital bonuses from the rest of the
+                                    editions, even more character
+                                    and weapon skins, and access to two upcoming story expansions along with all the
+                                    additional downloadable content.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                +preorder
+                                <img src="source/images/bonus-items 1.png" alt="">
+                                bonus <img src="source/images/icons/info.png">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Preorder Bonus</p>
+                                <p>Special Extra Quest</p>
+                                <p>Official Soundtrack</p>
+                                <p>3 Costumes, 7 Weapon skins</p>
+                                <p>SEASON PASS</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Steam Exclusive Content</p>
+                                <p>Digital Artbook</p>
+                                <p>1 Costume, 3 Weapon skins</p>
+                                <p>2 Story Expansions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div id='d1' class="gal1" style="display:none;"><img src="source/images/editions/deluxe.png" alt=""></div>
+            
 
-    <div id='d2' class="gal1" style="display:none;"><img src="source/images/editions/standart.png" alt=""></div>
+        </div>
+    </div>
+        <!-- <div class="container-fluid main">
+            <div class="container requirements ">
+                <div class="row">
+                    <div class="col requirements__maintitle">
+                        <h2>SYSTEM REQUIREMENTS</h2>
+                        <img src="source/images/borders/requirements/tr-line.png" alt="">
+                    </div>
+                </div>
+                <div class="row ">
 
-    <div id='d3' class="gal1">
-      <img src="source/images/editions/ultimate.png" alt="">
-      </div>
-    <script type="text/javascript">
-    $(document).ready(function (){
-        $('#spisok > li').click(function (){
-            $('#container-menu > div').hide();
-            var i=$(this).data('id');
-            $('#d'+i).fadeIn();
-        });
-    });
-    </script>
-
-</div>
-
-
-
-
+                    <div class="col-md-6">
+                        <h2 class="requirements__title">minimum</h2>
+                        <div class="requirements__container requirements__container_params">
+                            <div class="row">
+                                <div class="col-md-3 param">OS Version:</div>
+                                <div class="col-md-9 desc">Windows 10</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 param">Processor:</div>
+                                <div class="col-md-9 desc">AMD Ryzen 5 1600X / Intel Core i5-7600K</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 param">Memory:</div>
+                                <div class="col-md-9 desc">8 GB</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 param">OS Version:</div>
+                                <div class="col-md-9 desc">AMD Radeon RX 580 8GB / NVIDIA GeForce GTX 1060 6GB</div>
+                            </div>
+                            <div class="row" style="padding-bottom: 43px;">
+                                <div class="col-md-3 param">Disc space:</div>
+                                <div class="col-md-9 desc">150 GB SSD</div>
+                            </div>
+                        </div>
+                        <h2 class="requirements__title">recommended</h2>
+                        <div class="requirements__container requirements__container_params">
+                            <div class="row">
+                                <div class="col-md-3 param">OS Version:</div>
+                                <div class="col-md-9 desc">Windows 10</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 param">Processor:</div>
+                                <div class="col-md-9 desc">AMD Ryzen 7 3700X / Intel Core i7-9700K</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 param">Memory:</div>
+                                <div class="col-md-9 desc">8 GB</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 param">OS Version:</div>
+                                <div class="col-md-9 desc">AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB
+                                    / NVIDIA GeForce GTX 1080 Ti 11GB
+                                </div>
+                            </div>
+                            <div class="row" style="padding-bottom: 30px;">
+                                <div class="col-md-3 param">Disc space:</div>
+                                <div class="col-md-9 desc">150 GB SSD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="requirements__title">gameplay</h2>
+                        <div class="row requirements__container requirements__gameplay">
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-6 d-flex align-items-center">
+                                        <img src="source/images/icons/palyer-icon.png">
+                                        Singleplayer
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center">
+                                        <img src="source/images/icons/controlleer-icon.png">
+                                        Full Controller Support
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 d-flex align-items-center">
+                                        <img src="source/images/icons/users-icon.png">
+                                        Multiplayer (coming soon after the release, as a free update)
+                                    </div>
+                                    <div class="col-md-4"><p>RATING: </p></div>
+                                </div>
+                            </div>
+                            <div class="col-md-3"><img src="source/images/rating.png" class="img-rating"></div>
+                        </div>
+                        <h2 class="requirements__title">localization</h2>
+                        <div class="requirements__container requirements__localization">
+                            <div class="requirements__title">VOICE & SUBTITLES:</div>
+                            <p>
+                                <img src="source/images/flags/en.png"><span>English</span>
+                                <img src="source/images/flags/ukr.png"><span>Ukrainian</span>
+                                <img src="source/images/flags/ru.png"><span>Russian</span>
+                            </p>
+                            <div class="requirements__title">SUBTITLES only:</div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p><img src="source/images/flags/pol.png">Polish</p>
+                                    <p><img src="source/images/flags/itl.png">Italian</p>
+                                    <p><img src="source/images/flags/braz.png">Brazilian Portuguese</p>
+                                    <p><img src="source/images/flags/ger.png">German</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><img src="source/images/flags/esp.png">Spanish</p>
+                                    <p><img src="source/images/flags/china.png">Chinese Simplified</p>
+                                    <p><img src="source/images/flags/china.png">Chinese Traditional</p>
+                                    <p><img src="source/images/flags/fr.png">French</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><img src="source/images/flags/jap.png">Japanese</p>
+                                    <p><img src="source/images/flags/kor.png">Korean</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
 
-    <div class="container-fluid main">
-      <div class="container requirements ">
-        <div class="row">
-          <div class="col requirements__maintitle">
-            <h2>SYSTEM REQUIREMENTS</h2>
-            <img src="source/images/borders/requirements/tr-line.png" alt="">
-          </div>
-        </div>
-        <div class="row ">
-
-          <div class="col-md-6">
-            <h2 class="requirements__title">minimum</h2>
-            <div class="requirements__container requirements__container_params">
-              <div class="row">
-                <div class="col-md-3 param">OS Version:</div>
-                <div class="col-md-9 desc">Windows 10</div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 param">Processor:</div>
-                <div class="col-md-9 desc">AMD Ryzen 5 1600X / Intel Core i5-7600K</div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 param">Memory:</div>
-                <div class="col-md-9 desc">8 GB</div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 param">OS Version: </div>
-                <div class="col-md-9 desc">AMD Radeon RX 580 8GB / NVIDIA GeForce GTX 1060 6GB</div>
-              </div>
-              <div class="row" style="padding-bottom: 43px;">
-                <div class="col-md-3 param">Disc space:</div>
-                <div class="col-md-9 desc">150 GB SSD</div>
-              </div>
-            </div>
-            <h2 class="requirements__title">recommended</h2>
-            <div class="requirements__container requirements__container_params">
-              <div class="row">
-                <div class="col-md-3 param">OS Version:</div>
-                <div class="col-md-9 desc">Windows 10</div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 param">Processor:</div>
-                <div class="col-md-9 desc">AMD Ryzen 7 3700X / Intel Core i7-9700K</div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 param">Memory:</div>
-                <div class="col-md-9 desc">8 GB</div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 param">OS Version: </div>
-                <div class="col-md-9 desc">AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB / NVIDIA GeForce GTX 1080 Ti 11GB</div>
-              </div>
-              <div class="row" style="padding-bottom: 30px;">
-                <div class="col-md-3 param">Disc space:</div>
-                <div class="col-md-9 desc">150 GB SSD</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="requirements__title">gameplay</h2>
-            <div class="row requirements__container requirements__gameplay">
-            <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                  <img src="source/images/icons/palyer-icon.png">
-                  Singleplayer</div>
-                <div class="col-md-6 d-flex align-items-center">
-                  <img src="source/images/icons/controlleer-icon.png">
-                  Full Controller Support
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-8 d-flex align-items-center">
-                <img src="source/images/icons/users-icon.png">
-                 Multiplayer (coming soon after the release, as a free update)
-              </div>
-              <div class="col-md-4"><p>RATING: </p></div>
-              </div>
-            </div>
-              <div class="col-md-3"><img src="source/images/rating.png" class="img-rating"></div>
-            </div>
-            <h2 class="requirements__title">localization</h2>
-            <div class="requirements__container requirements__localization">
-              <div class="requirements__title">VOICE & SUBTITLES:</div>
-              <p>
-                <img src="source/images/flags/en.png"><span>English</span>
-                <img src="source/images/flags/ukr.png"><span>Ukrainian</span>
-                <img src="source/images/flags/ru.png"><span>Russian</span>
-              </p>
-              <div class="requirements__title">SUBTITLES only:</div>
-              <div class="row">
-                <div class="col-md-4">
-                  <p><img src="source/images/flags/pol.png">Polish</p>
-                  <p><img src="source/images/flags/itl.png">Italian</p>
-                  <p><img src="source/images/flags/braz.png">Brazilian Portuguese</p>
-                  <p><img src="source/images/flags/ger.png">German</p>
-                </div>
-                <div class="col-md-4">
-                  <p><img src="source/images/flags/esp.png">Spanish</p>
-                  <p><img src="source/images/flags/china.png">Chinese Simplified</p>
-                  <p><img src="source/images/flags/china.png">Chinese Traditional</p>
-                  <p><img src="source/images/flags/fr.png">French</p>
-                </div>
-                <div class="col-md-4">
-                  <p><img src="source/images/flags/jap.png">Japanese</p>
-                  <p><img src="source/images/flags/kor.png">Korean</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
 </body>
 </html>
