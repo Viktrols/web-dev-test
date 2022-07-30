@@ -1,10 +1,10 @@
 @import "null_style.scss";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Rubik:wght@300;400&display=swap');
 
 // colors
 $lc: #F2E8D9; //light color
 $oc: #EE991A; //orange
-$gc: #A2A2A2; //grey 
+$gc: #A2A2A2; //grey
 // fonts
 $ff-r: 'Rubik', sans-serif;
 $ff-o: 'Oswald', sans-serif;
@@ -14,6 +14,7 @@ body {
 }
 .editions {
 	background: url('../images/background/bg.png');
+	height: 800px;
 }
 .requirements {
 	font-size: 18px;
@@ -22,33 +23,36 @@ body {
 	background: url('../images/background/bg-2.png');
 	background-size: cover;
 	padding-top: 40px;
+	padding-bottom: 43px;
 }
-.requirements__title {
+.requirements__maintitle {
 	font-size: 54px;
 	text-align: center;
 	font-family: $ff-o;
 	font-weight: 500;
 	line-height: 80px;
 
+
 text-align: center;
 text-transform: uppercase;
-	
+
 }
 .requirements__container {
 	border-style: solid;
 	border-width: 0.55rem;
-	border-image: url('../images/requirements-border.svg') 21 21 stretch;
+	border-image: url('../images/borders/requirements/requirements-border.svg') 21 21 stretch;
     background: rgba(6, 6, 5, 0.5);
 	div{
-		padding-bottom: 16px;
+		padding-bottom: 10px;
 		}
 }
 
 .requirements__container_params {
 	padding-top: 40px;
 	font-family: $ff-r;
+	padding-right: 70px;
 	.param {
-		
+
 		font-weight: 400;
 		line-height: 21px;
 		text-align: right;
@@ -67,5 +71,56 @@ text-transform: uppercase;
 	line-height: 36px;
 	text-transform: uppercase;
 	text-align: left;
+	padding-left: 18px;
 
+}
+
+.requirements__gameplay {
+	margin: 0;
+	padding-top: 38px;
+	padding-left: 28px;
+	padding-bottom: 25px;;
+	line-height: 24px;
+	img {
+		padding-right: 18px;
+	}
+	.img-rating {
+		padding-top: 44px;
+	}
+	p {
+		padding-top: 26px;;
+		text-align: right;
+	}
+}
+
+
+.requirements__localization{
+	// padding-top: 26px;
+	padding-left: 29px;
+	color: #FFFFFF;
+	font-family: $ff-o;
+	font-weight: 400;
+	line-height: 27px;
+	span{
+		padding-right: 10px;
+	}
+	img {
+		padding-top: 5px;
+		padding-right: 8px;
+	}
+	.requirements__title {
+		padding-top: 33px;
+		padding-bottom: 26px;
+		color: $lc ;
+		padding-left: 0;
+	}
+}
+.container-fluid {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+
+.toogle:not(:focus)>.hideable {
+  display:none;
 }
