@@ -96,7 +96,7 @@ body {
 }
 
 .editions__menu {
-  padding: 40px 0 0 150px;
+  padding: 40px 0 0 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,7 +129,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    margin: 0 0 24px -10px;
+    margin: 0 0 24px 10px;
   }
 }
 
@@ -279,11 +279,11 @@ body {
     display: none;
   }
 }
-.editions__list .dark_desc .dark_mob {
+.editions__list .dark_mob {
   display: none;
 }
 @media screen and (max-width: 450px) {
-  .editions__list .dark_desc .dark_mob {
+  .editions__list .dark_mob {
     display: inline;
   }
 }
@@ -360,7 +360,7 @@ body {
   padding-right: 18px;
 }
 .requirements__gameplay .img-rating {
-  padding-top: 44px;
+  padding-top: 24px;
 }
 .requirements__gameplay .rating_mob {
   display: none;
@@ -383,6 +383,11 @@ body {
 .requirements__gameplay p {
   padding-top: 26px;
   text-align: right;
+}
+@media screen and (max-width: 450px) {
+  .requirements__gameplay .row:first-child {
+    padding-bottom: 0;
+  }
 }
 
 .requirements__localization {
