@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,48 +12,67 @@
     <link rel="stylesheet" href="source/css/style.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
-                $(document).ready(function (){
-                    $('#editions__menu > li > span ').click(function (){
-                        $('#container-menu > div').hide();
-                        var i=$(this).data('id');
-                            $('#d'+i).fadeIn();
-                        });
-                    });</script>
-
+        $(document).ready(function (){
+            $('#editions__menu > li > button ').click(function (){
+                $('#editions__menu > li > button ').removeClass('active-button')
+                $(this).toggleClass('active-button');
+                $('#container-menu > div').hide();
+                var i=$(this).data('id');
+                $('#d'+i).fadeIn();
+                });
+            });
+    </script>
 </head>
-
 <body>
 <div class="container-fluid">
     <div class="row editions">
-        <ul id='editions__menu' class="list-group list-group-horizontal-md">
-            <li><img src="source/images/borders/menu/line-01.png"></li>
-            <li><span data-id='1'><div class='title_komplekt_1'>Standart</div></span>
-            <li>
-            <li><img src="source/images/borders/menu/line-02.png"></li>
-            <li><span data-id='2'><div class='title_komplekt_2'>Deluxe</div></span></li>
-            <li><img src="source/images/borders/menu/line-03.png"></li>
-            <li><span data-id='3'><div class='title_komplekt_3'>Ultimate</div></span></li>
-            <li><img src="source/images/borders/menu/line-04.png"></li>
-        </ul>
+        <div class="row editions__menu">
+            <div class="col-6 col-md-7">
+                <ul id='editions__menu' class="list-group list-group-horizontal-md">
+                    <li>
+                        <img src="source/images/borders/menu/line-01.png">
+                    </li>
+                    <li>
+                        <button data-id='1'><div class='title_komplekt_1'>Standart</div></button>
+                    <li>
+                    <li>
+                        <img src="source/images/borders/menu/line-02.png">
+                    </li>
+                    <li>
+                        <button data-id='2'><div class='title_komplekt_2'>Deluxe</div></button>
+                    </li>
+                    <li>
+                        <img src="source/images/borders/menu/line-03.png">
+                    </li>
+                    <li>
+                        <button data-id='3' class="active-button"><div class='title_komplekt_3'>Ultimate</div></button>
+                    </li>
+                    <li>
+                        <img src="source/images/borders/menu/line-04.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div id='container-menu'>
-
             <div id='d1' class="gal1 container" style="display:none;">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5 editions__image">
                         <img src="source/images/editions/standart.png" alt="">
-                        <button><img src="source/images/button-pre-order.png" alt=""></button>
+                        <div>
+                            <button>PREORDER NOW</button>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-8">
+                    <div class="col-md-6 editions__textblock">
+                        <div class="row editions__version_title">
+                            <div class="col-md-8 editions__version_name">
                                 Standart edition
                             </div>
-                            <div class="col-md-4">
-                                ₴895.00
+                            <div class="col-md-4 editions__version_price">
+                                ₴<span>895</span>.00 
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 editions__description">
                                 <p>
                                     S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed
                                     survival-horror FPS series,
@@ -75,50 +93,57 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                +preorder
-                                <img src="source/images/bonus-items 1.png" alt="">
-                                bonus <img src="source/images/icons/info.png">
-                            </div>
+                        <div class="editions__bonus">
+                            <p>+preorder</p>
+                            <img src="source/images/bonus-items1.png" alt="">
+                            <p>bonus </p>     
                         </div>
-                        <div class="row">
+                        <div class="row editions__list">
                             <div class="col-md-6">
                                 <p>Preorder Bonus</p>
-                                <p>Special Extra Quest</p>
-                                <p>Official Soundtrack</p>
-                                <p>3 Costumes, 7 Weapon skins</p>
-                                <p>SEASON PASS</p>
+                                <p class="dark dark_desc">Special Extra Quest</p>
+                                <p class="dark dark_desc">Official Soundtrack</p>
+                                <p class="dark dark_desc">3 Costumes, 7 Weapon skins</p>
+                                <p class="dark dark_desc">SEASON PASS</p>
                             </div>
                             <div class="col-md-6">
                                 <p>Steam Exclusive Content</p>
-                                <p>Digital Artbook</p>
-                                <p>1 Costume, 3 Weapon skins</p>
-                                <p>2 Story Expansions</p>
+                                <p class="dark dark_desc">Digital Artbook</p>
+                                <p class="dark dark_desc">1 Costume, 3 Weapon skins</p>
+                                <p class="dark dark_desc">2 Story Expansions</p>
+                            </div>
+                            <div class="dark_mob">
+                                <p class="dark">Special Extra Quest</p>
+                                <p class="dark">Official Soundtrack</p>
+                                <p class="dark">3 Costumes, 7 Weapon skins</p>
+                                <p class="dark">SEASON PASS</p>
+                                <p class="dark">Digital Artbook</p>
+                                <p class="dark">1 Costume, 3 Weapon skins</p>
+                                <p class="dark">2 Story Expansions</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <div id='d2' class="gal1 container" style="display:none;">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5 editions__image">
                         <img src="source/images/editions/deluxe.png" alt="">
-                        <button><img src="source/images/button-pre-order.png" alt=""></button>
+                        <div>
+                            <button>PREORDER NOW</button>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-8">
+                    <div class="col-md-6 editions__textblock">
+                        <div class="row editions__version_title">
+                            <div class="col-md-8 editions__version_name">
                                 Deluxe edition
                             </div>
-                            <div class="col-md-4">
-                                ₴1199.00
+                            <div class="col-md-4 editions__version_price">
+                                ₴<span>1199</span>.00
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 editions__description">
                                 <p>
                                     S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed
                                     survival-horror
@@ -138,51 +163,53 @@
                                     character, and weapon skins for both singleplayer and multiplayer experience.
                                 </p>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                +preorder
-                                <img src="source/images/bonus-items 1.png" alt="">
-                                bonus <img src="source/images/icons/info.png">
-                            </div>
-                        </div>
-                        <div class="row">
+                        </div>                        
+                            <div class=" col editions__bonus">
+                                <p>+preorder</p>
+                                <img src="source/images/bonus-items1.png" alt="">
+                                <p>bonus </p>     
+                            </div>                       
+                        <div class="row editions__list">
                             <div class="col-md-6">
                                 <p>Preorder Bonus</p>
                                 <p>Special Extra Quest</p>
                                 <p>Official Soundtrack</p>
                                 <p>3 Costumes, 7 Weapon skins</p>
-                                <p>SEASON PASS</p>
+                                <p class="dark dark_desc">SEASON PASS</p>
                             </div>
                             <div class="col-md-6">
                                 <p>Steam Exclusive Content</p>
                                 <p>Digital Artbook</p>
                                 <p>1 Costume, 3 Weapon skins</p>
-                                <p>2 Story Expansions</p>
+                                <p class="dark dark_desc">2 Story Expansions</p>
+                            </div>
+                            <div class="dark_mob">
+                                <p class="dark">SEASON PASS</p>
+                                <p class="dark">2 Story Expansions</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
             <div id='d3' class="gal1 container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5 editions__image">
                         <img src="source/images/editions/ultimate.png" alt="">
-                        <button><img src="source/images/button-pre-order.png" alt=""></button>
+                        <div>
+                            <button>PREORDER NOW</button>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-8">
+                    <div class="col-md-6 editions__textblock ">
+                        <div class="row editions__version_title">
+                            <div class="col-md-8 editions__version_name">
                                 Ultimate edition
                             </div>
-                            <div class="col-md-4">
-                                ₴1599.00
+                            <div class="col-md-4 editions__version_price">
+                                ₴<span>1599</span>.00
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 editions__description">
                                 <p>
                                     S.T.A.L.K.E.R. 2: Heart of Chernobyl is a sequel to the critically acclaimed
                                     survival-horror FPS series,
@@ -202,15 +229,13 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                +preorder
-                                <img src="source/images/bonus-items 1.png" alt="">
-                                bonus <img src="source/images/icons/info.png">
-                            </div>
+                        <div class="editions__bonus">
+                            <p>+preorder</p>
+                            <img src="source/images/bonus-items1.png" alt="">
+                            <p>bonus </p>     
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
+                        <div class="row editions__list">
+                            <div class="col-md-6 ">
                                 <p>Preorder Bonus</p>
                                 <p>Special Extra Quest</p>
                                 <p>Official Soundtrack</p>
@@ -227,12 +252,9 @@
                     </div>
                 </div>
             </div>
-
-            
-
         </div>
     </div>
-        <!-- <div class="container-fluid main">
+        <div class="container-fluid requirements__main">
             <div class="container requirements ">
                 <div class="row">
                     <div class="col requirements__maintitle">
@@ -241,54 +263,54 @@
                     </div>
                 </div>
                 <div class="row ">
-
                     <div class="col-md-6">
                         <h2 class="requirements__title">minimum</h2>
                         <div class="requirements__container requirements__container_params">
                             <div class="row">
-                                <div class="col-md-3 param">OS Version:</div>
-                                <div class="col-md-9 desc">Windows 10</div>
+                                <div class="col-4 col-md-3 param">OS Version:</div>
+                                <div class="col-8 col-md-9 desc">Windows 10</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 param">Processor:</div>
-                                <div class="col-md-9 desc">AMD Ryzen 5 1600X / Intel Core i5-7600K</div>
+                                <div class=" col-4 col-md-3 param">Processor:</div>
+                                <div class=" col-8 col-md-9 desc">AMD Ryzen 5 1600X / Intel Core i5-7600K</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 param">Memory:</div>
-                                <div class="col-md-9 desc">8 GB</div>
+                                <div class="col-4 col-md-3 param">Memory:</div>
+                                <div class="col-8 col-md-9 desc">8 GB</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 param">OS Version:</div>
-                                <div class="col-md-9 desc">AMD Radeon RX 580 8GB / NVIDIA GeForce GTX 1060 6GB</div>
+                                <div class="col-4 col-md-3 param">OS Version:</div>
+                                <div class="col-8 col-md-9 desc">AMD Radeon RX 580 8GB / NVIDIA GeForce GTX 1060 6GB</div>
                             </div>
                             <div class="row" style="padding-bottom: 43px;">
-                                <div class="col-md-3 param">Disc space:</div>
-                                <div class="col-md-9 desc">150 GB SSD</div>
+                                <div class="col-4 col-md-3 param">Disc space:</div>
+                                <div class="col-8 col-md-9 desc">150 GB SSD</div>
                             </div>
                         </div>
                         <h2 class="requirements__title">recommended</h2>
                         <div class="requirements__container requirements__container_params">
                             <div class="row">
-                                <div class="col-md-3 param">OS Version:</div>
-                                <div class="col-md-9 desc">Windows 10</div>
+                                <div class="col-4 col-md-3 param">OS Version:</div>
+                                <div class="col-8 col-md-9 desc">Windows 10</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 param">Processor:</div>
-                                <div class="col-md-9 desc">AMD Ryzen 7 3700X / Intel Core i7-9700K</div>
+                                <div class="col-4 col-md-3 param">Processor:</div>
+                                <div class="col-8 col-md-9 desc">AMD Ryzen 7 3700X / Intel Core i7-9700K</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 param">Memory:</div>
-                                <div class="col-md-9 desc">8 GB</div>
+                                <div class="col-4 col-md-3 param">Memory:</div>
+                                <div class="col-8 col-md-9 desc">8 GB</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 param">OS Version:</div>
-                                <div class="col-md-9 desc">AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB
+                                <div class="col-4 col-md-3 param">OS Version:</div>
+                                <div class="col-8 col-md-9 desc">
+                                    AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB
                                     / NVIDIA GeForce GTX 1080 Ti 11GB
                                 </div>
                             </div>
                             <div class="row" style="padding-bottom: 30px;">
-                                <div class="col-md-3 param">Disc space:</div>
-                                <div class="col-md-9 desc">150 GB SSD</div>
+                                <div class="col-4 col-md-3 param">Disc space:</div>
+                                <div class="col-8 col-md-9 desc">150 GB SSD</div>
                             </div>
                         </div>
                     </div>
@@ -297,11 +319,11 @@
                         <div class="row requirements__container requirements__gameplay">
                             <div class="col-md-9">
                                 <div class="row">
-                                    <div class="col-md-6 d-flex align-items-center">
+                                    <div class=" col-12 col-md-6 d-flex align-items-center">
                                         <img src="source/images/icons/palyer-icon.png">
                                         Singleplayer
                                     </div>
-                                    <div class="col-md-6 d-flex align-items-center">
+                                    <div class="col-12 col-md-6 d-flex align-items-center">
                                         <img src="source/images/icons/controlleer-icon.png">
                                         Full Controller Support
                                     </div>
@@ -311,19 +333,23 @@
                                         <img src="source/images/icons/users-icon.png">
                                         Multiplayer (coming soon after the release, as a free update)
                                     </div>
-                                    <div class="col-md-4"><p>RATING: </p></div>
+                                    <div class="col-md-4 rating_desc"><p>RATING: </p></div>
+                                </div>
+                                <div class="row rating_mob">
+                                    <div class="col-3">RATING: </div> 
+                                    <div class="col-9"><img src="source/images/icons/rating.png"></div>
                                 </div>
                             </div>
-                            <div class="col-md-3"><img src="source/images/rating.png" class="img-rating"></div>
+                            <div class="col-md-3 rating_desc"><img src="source/images/icons/rating.png" class="img-rating"></div>
                         </div>
                         <h2 class="requirements__title">localization</h2>
                         <div class="requirements__container requirements__localization">
-                            <div class="requirements__title">VOICE & SUBTITLES:</div>
-                            <p>
-                                <img src="source/images/flags/en.png"><span>English</span>
-                                <img src="source/images/flags/ukr.png"><span>Ukrainian</span>
-                                <img src="source/images/flags/ru.png"><span>Russian</span>
-                            </p>
+                            <div class="requirements__title">VOICE & SUBTITLES:</div>                       
+                            <div class="voice">
+                                <div><img src="source/images/flags/en.png"><span>English</span></div>
+                                <div><img src="source/images/flags/ukr.png"><span>Ukrainian</span></div>
+                                <div><img src="source/images/flags/ru.png"><span>Russian</span></div>
+                            </div>
                             <div class="requirements__title">SUBTITLES only:</div>
                             <div class="row">
                                 <div class="col-md-4">
@@ -347,8 +373,8 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
-
+</div>
 </body>
 </html>

@@ -2,37 +2,221 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Rubik:wght@300;400&display=swap');
 
 // colors
-$lc: #F2E8D9; //light color
+$lc: #F2E8D9; //light
 $oc: #EE991A; //orange
 $gc: #A2A2A2; //grey
+$bc: #4D1D0E; //brown
+
 // fonts
 $ff-r: 'Rubik', sans-serif;
 $ff-o: 'Oswald', sans-serif;
 
+@mixin bonus-list-ba {
+	position: relative;
+	top: 2px;
+}
+
+
+html {
+	overflow-x: hidden;
+}
 body {
 	color: $lc;
 	overflow-x: hidden;
+	font-family: $ff-r;
 }
 .editions {
 	background: url('../images/background/bg.png');
+	background-size: 100% 100%;
+	padding-bottom: 40px;
+	@media screen and (max-width: 450px){
+		background: url('../images/background/bg-mob1.png');
+		background-size: 100% 100%;
 	}
-.requirements {
-	font-size: 18px;
 }
-.main {
+.editions__menu {
+	padding: 40px 0 0 150px;
+	display: flex;
+	justify-content: flex-end;
+	margin-left: 40px;
+	img {
+		padding: 8px;
+		@media screen and (max-width: 450px){
+			display: none;
+		}
+	}
+	button {
+		background: none;
+		color: $lc;
+		font: 500 16px/19px $ff-r;
+		text-transform: uppercase;
+	}
+	.active-button{
+		color: $oc;
+	}
+	@media screen and (max-width: 450px){
+			display: block;
+			justify-content: center;
+			text-align: center;
+			margin: 0 0 24px -10px;
+		}
+		}
+		
+.editions__textblock {
+	margin-left: 40px;
+	@media screen and (max-width: 450px){
+		margin-left: 0px;
+	}
+}
+.editions__image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	button {
+		background-image: url('../images/background/button-bg.jpeg');
+		background-size: 100% 100%;
+    	background-color: #ee991a;
+    	background-blend-mode: multiply;
+		padding: 15px 66px;
+		font: 500 28px/41px $ff-o;
+		text-transform: uppercase;
+		color: $bc;
+		outline: 3px solid $bc;
+		outline-offset: -5px;
+		@media screen and (max-width: 450px){
+			margin-top: 28px;
+		}
+	}
+}
+.editions__version_title {
+	padding: 50px 0 10px 0;	
+}
+
+.editions__version_name {
+	padding: 12px;
+	font: 500 32px/47px $ff-o;
+	text-transform: uppercase;
+}
+
+.editions__version_price {
+	color: $oc;
+	font: 400 23px/36px $ff-o;
+	text-align: right;
+	span {
+		font: 400 43px/64px $ff-o;
+	}
+	@media screen and (max-width: 450px){
+		text-align: left;
+	}
+}
+
+.editions__description {
+	font: 400 16px/24px $ff-r;
+	p {
+		padding-bottom: 10px;
+	}
+}
+.editions__bonus {
+	margin: 30px 0 47px 0;
+	background:  url('../images/background/bonus-bg.png') no-repeat 0px 20px;
+	display: flex;
+	position: relative;
+	font: 700 28px/41px $ff-o;
+	text-transform: uppercase;
+	p {	
+		padding: 27px 0 0 60px;
+		&:last-child {
+			padding-left: 255px;
+			&::after {
+				content: url('../images/icons/info.png');
+				padding-left: 8px;
+			}
+		}
+	}
+	img {
+		position: absolute;
+		left: 220px;
+		top: -55px;
+	}
+	@media screen and (max-width: 450px){
+		display: none;
+	}
+}
+
+.editions__list {
+	font: 400 16px/19px $ff-r;
+	div{
+		&:last-child {
+			padding-left: 40px;
+			@media screen and (max-width: 450px){
+				padding-left: 10px;
+			}
+		}
+	}
+	p {
+		&::before{
+			content: url('../images/icons/radiation1.png');
+			padding-right: 24px;
+			@include bonus-list-ba;
+		}
+		&::after {
+			content: url('../images/icons/small.png');
+			padding-left: 13px;
+			@include bonus-list-ba;
+		}
+	}
+	.dark {
+		color: #333333;
+		&::before{
+			content: url('../images/icons/radiation2.png');
+			padding-right: 24px;
+			@include bonus-list-ba;
+		}
+		&::after {
+			content: url('../images/icons/small2.png');
+			padding-left: 13px;
+			@include bonus-list-ba;
+		}
+		
+	}
+	.dark_desc {
+		@media screen and (max-width: 450px){
+			display: none;
+		}
+	.dark_mob {
+		display: none;
+		@media screen and (max-width: 450px){
+			display: inline;
+		}
+	}
+	}
+}
+
+.requirements {
+	// font-size: 18px;
+}
+.requirements__main {
 	background: url('../images/background/bg-2.png');
-	background-size: cover;
+	background-size: 100% 100%;
 	padding-top: 40px;
-	padding-bottom: 43px;
+	padding-bottom: 45px;
+	@media screen and (max-width: 450px){
+		background: url('../images/background/bc-mob2.png');
+		background-size: 100% 100%;
+	}
 }
 .requirements__maintitle {
-	font-size: 54px;
-	text-align: center;
-	font-family: $ff-o;
-	font-weight: 500;
-	line-height: 80px;
+	font: 500 54px/80px $ff-o;
 	text-align: center;
 	text-transform: uppercase;
+	@media screen and (max-width: 450px){
+		line-height: 41.5px;
+		font-size: 28px;
+		img {
+			max-width: 222px;
+		}
+	}
 }
 .requirements__container {
 	border-style: solid;
@@ -43,61 +227,63 @@ body {
 		padding-bottom: 10px;
 		}
 }
-
 .requirements__container_params {
-	padding-top: 40px;
-	font-family: $ff-r;
-	padding-right: 70px;
+	padding: 40px 70px 0 0;
 	.param {
-
-		font-weight: 400;
-		line-height: 21px;
+		font: 400 18px/21.33px $ff-r;
 		text-align: right;
 			}
 	.desc {
 		color: $gc;
-		font-weight: 300;
-		line-height: 24px;
+		font: 300 18px/24px $ff-r;
 	}
-}
-
+	@media screen and (max-width: 450px) {
+		padding: 15px 0 0 0;
+		}
+	}
 .requirements__title {
-	font-family: $ff-o;
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 36px;
+	font: 500 24px/36px $ff-o;
 	text-transform: uppercase;
 	text-align: left;
 	padding-left: 18px;
 
 }
-
 .requirements__gameplay {
 	margin: 0;
-	padding-top: 38px;
-	padding-left: 28px;
-	padding-bottom: 25px;;
-	line-height: 24px;
+	padding: 38px 0 25px 0;
+	font: 400 18px/24px $ff-r;
 	img {
 		padding-right: 18px;
 	}
 	.img-rating {
 		padding-top: 44px;
 	}
+	.rating_mob {
+		display: none;
+		@media screen and (max-width: 450px){
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+	.rating_desc {
+		@media screen and (max-width: 450px) {
+			display: none;
+		}
+	}
 	p {
-		padding-top: 26px;;
+		padding-top: 26px;
 		text-align: right;
 	}
 }
 
-
 .requirements__localization{
-	// padding-top: 26px;
 	padding-left: 29px;
 	color: #FFFFFF;
-	font-family: $ff-o;
-	font-weight: 400;
-	line-height: 27px;
+	font: 400 18px/27px $ff-o;
+	.voice {
+		display: flex;
+		flex-direction: row;
+	}
 	span{
 		padding-right: 10px;
 	}
@@ -106,13 +292,28 @@ body {
 		padding-right: 8px;
 	}
 	.requirements__title {
-		padding-top: 33px;
-		padding-bottom: 26px;
-		color: $lc ;
-		padding-left: 0;
+		padding: 33px 0 26px 0;
+	}
+	@media screen and (max-width: 450px){
+		color: $lc;
+		.col-md-4 {
+			padding-bottom: 0;
+			p{
+				margin-bottom: 0px;
+			}
+		}
+		.voice {
+			display: flex;
+			flex-direction: column;
+		}
+		.requirements__title {
+			padding: 18px 0 8px 0;
+		}
 	}
 }
 .container-fluid {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }

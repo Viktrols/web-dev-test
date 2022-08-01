@@ -73,34 +73,247 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------------------------------------------*/
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: #F2E8D9;
   overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
 }
 
 .editions {
   background: url("../images/background/bg.png");
+  background-size: 100% 100%;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 450px) {
+  .editions {
+    background: url("../images/background/bg-mob1.png");
+    background-size: 100% 100%;
+  }
 }
 
-.requirements {
-  font-size: 18px;
+.editions__menu {
+  padding: 40px 0 0 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 40px;
+}
+.editions__menu img {
+  padding: 8px;
+}
+@media screen and (max-width: 450px) {
+  .editions__menu img {
+    display: none;
+  }
+}
+.editions__menu button {
+  background: none;
+  color: #F2E8D9;
+  font: 500 16px/19px "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+.editions__menu .active-button {
+  color: #EE991A;
+}
+@media screen and (max-width: 450px) {
+  .editions__menu {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin: 0 0 24px -10px;
+  }
 }
 
-.main {
+.editions__textblock {
+  margin-left: 40px;
+}
+@media screen and (max-width: 450px) {
+  .editions__textblock {
+    margin-left: 0px;
+  }
+}
+
+.editions__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.editions__image button {
+  background-image: url("../images/background/button-bg.jpeg");
+  background-size: 100% 100%;
+  background-color: #ee991a;
+  background-blend-mode: multiply;
+  padding: 15px 66px;
+  font: 500 28px/41px "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #4D1D0E;
+  outline: 3px solid #4D1D0E;
+  outline-offset: -5px;
+}
+@media screen and (max-width: 450px) {
+  .editions__image button {
+    margin-top: 28px;
+  }
+}
+
+.editions__version_title {
+  padding: 50px 0 10px 0;
+}
+
+.editions__version_name {
+  padding: 12px;
+  font: 500 32px/47px "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.editions__version_price {
+  color: #EE991A;
+  font: 400 23px/36px "Oswald", sans-serif;
+  text-align: right;
+}
+.editions__version_price span {
+  font: 400 43px/64px "Oswald", sans-serif;
+}
+@media screen and (max-width: 450px) {
+  .editions__version_price {
+    text-align: left;
+  }
+}
+
+.editions__description {
+  font: 400 16px/24px "Rubik", sans-serif;
+}
+.editions__description p {
+  padding-bottom: 10px;
+}
+
+.editions__bonus {
+  margin: 30px 0 47px 0;
+  background: url("../images/background/bonus-bg.png") no-repeat 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  font: 700 28px/41px "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.editions__bonus p {
+  padding: 27px 0 0 60px;
+}
+.editions__bonus p:last-child {
+  padding-left: 255px;
+}
+.editions__bonus p:last-child::after {
+  content: url("../images/icons/info.png");
+  padding-left: 8px;
+}
+.editions__bonus img {
+  position: absolute;
+  left: 220px;
+  top: -55px;
+}
+@media screen and (max-width: 450px) {
+  .editions__bonus {
+    display: none;
+  }
+}
+
+.editions__list {
+  font: 400 16px/19px "Rubik", sans-serif;
+}
+.editions__list div:last-child {
+  padding-left: 40px;
+}
+@media screen and (max-width: 450px) {
+  .editions__list div:last-child {
+    padding-left: 10px;
+  }
+}
+.editions__list p::before {
+  content: url("../images/icons/radiation1.png");
+  padding-right: 24px;
+  position: relative;
+  top: 2px;
+}
+.editions__list p::after {
+  content: url("../images/icons/small.png");
+  padding-left: 13px;
+  position: relative;
+  top: 2px;
+}
+.editions__list .dark {
+  color: #333333;
+}
+.editions__list .dark::before {
+  content: url("../images/icons/radiation2.png");
+  padding-right: 24px;
+  position: relative;
+  top: 2px;
+}
+.editions__list .dark::after {
+  content: url("../images/icons/small2.png");
+  padding-left: 13px;
+  position: relative;
+  top: 2px;
+}
+@media screen and (max-width: 450px) {
+  .editions__list .dark_desc {
+    display: none;
+  }
+}
+.editions__list .dark_desc .dark_mob {
+  display: none;
+}
+@media screen and (max-width: 450px) {
+  .editions__list .dark_desc .dark_mob {
+    display: inline;
+  }
+}
+
+.requirements__main {
   background: url("../images/background/bg-2.png");
-  background-size: cover;
+  background-size: 100% 100%;
   padding-top: 40px;
-  padding-bottom: 43px;
+  padding-bottom: 45px;
+}
+@media screen and (max-width: 450px) {
+  .requirements__main {
+    background: url("../images/background/bc-mob2.png");
+    background-size: 100% 100%;
+  }
 }
 
 .requirements__maintitle {
-  font-size: 54px;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  line-height: 80px;
+  font: 500 54px/80px "Oswald", sans-serif;
   text-align: center;
   text-transform: uppercase;
+}
+@media screen and (max-width: 450px) {
+  .requirements__maintitle {
+    line-height: 41.5px;
+    font-size: 28px;
+  }
+  .requirements__maintitle img {
+    max-width: 222px;
+  }
 }
 
 .requirements__container {
@@ -115,26 +328,24 @@ body {
 }
 
 .requirements__container_params {
-  padding-top: 40px;
-  font-family: "Rubik", sans-serif;
-  padding-right: 70px;
+  padding: 40px 70px 0 0;
 }
 .requirements__container_params .param {
-  font-weight: 400;
-  line-height: 21px;
+  font: 400 18px/21.33px "Rubik", sans-serif;
   text-align: right;
 }
 .requirements__container_params .desc {
   color: #A2A2A2;
-  font-weight: 300;
-  line-height: 24px;
+  font: 300 18px/24px "Rubik", sans-serif;
+}
+@media screen and (max-width: 450px) {
+  .requirements__container_params {
+    padding: 15px 0 0 0;
+  }
 }
 
 .requirements__title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  font: 500 24px/36px "Oswald", sans-serif;
   text-transform: uppercase;
   text-align: left;
   padding-left: 18px;
@@ -142,16 +353,32 @@ body {
 
 .requirements__gameplay {
   margin: 0;
-  padding-top: 38px;
-  padding-left: 28px;
-  padding-bottom: 25px;
-  line-height: 24px;
+  padding: 38px 0 25px 0;
+  font: 400 18px/24px "Rubik", sans-serif;
 }
 .requirements__gameplay img {
   padding-right: 18px;
 }
 .requirements__gameplay .img-rating {
   padding-top: 44px;
+}
+.requirements__gameplay .rating_mob {
+  display: none;
+}
+@media screen and (max-width: 450px) {
+  .requirements__gameplay .rating_mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+@media screen and (max-width: 450px) {
+  .requirements__gameplay .rating_desc {
+    display: none;
+  }
 }
 .requirements__gameplay p {
   padding-top: 26px;
@@ -161,9 +388,16 @@ body {
 .requirements__localization {
   padding-left: 29px;
   color: #FFFFFF;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  line-height: 27px;
+  font: 400 18px/27px "Oswald", sans-serif;
+}
+.requirements__localization .voice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .requirements__localization span {
   padding-right: 10px;
@@ -173,13 +407,35 @@ body {
   padding-right: 8px;
 }
 .requirements__localization .requirements__title {
-  padding-top: 33px;
-  padding-bottom: 26px;
-  color: #F2E8D9;
-  padding-left: 0;
+  padding: 33px 0 26px 0;
+}
+@media screen and (max-width: 450px) {
+  .requirements__localization {
+    color: #F2E8D9;
+  }
+  .requirements__localization .col-md-4 {
+    padding-bottom: 0;
+  }
+  .requirements__localization .col-md-4 p {
+    margin-bottom: 0px;
+  }
+  .requirements__localization .voice {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .requirements__localization .requirements__title {
+    padding: 18px 0 8px 0;
+  }
 }
 
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
